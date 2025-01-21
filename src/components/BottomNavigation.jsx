@@ -24,10 +24,10 @@ export default function BottomNavigation() {
                             <Link href={href} className="flex flex-col items-center justify-center w-full h-full">
                                 <Icon
                                     size={24}
-                                    className={`${isActive ? "text-blue-500" : "text-gray-500"} transition-colors duration-200`}
+                                    className={`${isActive ? "text-orange-500" : "text-gray-500"} transition-colors duration-200`}
                                 />
                                 <span
-                                    className={`text-xs mt-1 ${isActive ? "text-blue-500 font-medium" : "text-gray-500"
+                                    className={`text-xs mt-1 ${isActive ? "text-orange-500 font-medium" : "text-gray-500"
                                         } transition-colors duration-200`}
                                 >
                                     {label}
