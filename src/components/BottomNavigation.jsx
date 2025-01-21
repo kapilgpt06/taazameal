@@ -15,20 +15,22 @@ export default function BottomNavigation() {
     const pathname = usePathname()
 
     return (
-        <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 md:hidden">
+        <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-lg border-t border-gray-200 md:hidden">
             <ul className="flex justify-around items-center h-16">
                 {navItems.map(({ icon: Icon, label, href }) => {
                     const isActive = pathname === href
                     return (
                         <li key={href}>
                             <Link href={href} className="flex flex-col items-center justify-center w-full h-full">
-                                <Icon
-                                    size={24}
-                                    className={`${isActive ? "text-orange-500" : "text-gray-500"} transition-colors duration-200`}
-                                />
+                                <div className={`${isActive ? 'bg-orange-500' : "first-letter:"} px-3 py-0.5 rounded-full`}>
+                                    <Icon
+                                        size={20}
+                                        className={`${isActive ? 'text-white' : 'text-slate-700'}`}
+                                    />
+                                </div>
                                 <span
-                                    className={`text-xs mt-1 ${isActive ? "text-orange-500 font-medium" : "text-gray-500"
-                                        } transition-colors duration-200`}
+                                    className={`text-xs mt-1 ${isActive ? "text-orange-500" : "text-gray-500"
+                                        } transition-colors duration-200 font-bold`}
                                 >
                                     {label}
                                 </span>
